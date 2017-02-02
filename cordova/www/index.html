@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' http://192.168.4.3:8080 data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <title>Waynet</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        
+        <div class="header">
+            <div id="propertiesButton">
+                <img src="images/properties.png" alt="properties" id="propertiesIMG" onclick="openConfiguration()" />
+            </div>
+        </div>
+        
+        <div>
+            <div class="startBlock" id="startBlock" onclick="nextAfterStartBlock()">
+                <div class="bigLogo">
+                    <img class="bigLogoPng" src="images/LogoWaynet-White-Big.png" alt="Waynet" />
+                </div>
+                <div class="info">
+                    <h1 class="infoText" >We believe cities can talk with citizens in efficient way</h1>
+                </div>
+                <div class="help1">
+                    <p><small>Please tap to continue</small></p>
+                </div>
+            </div>
+
+            <div class="informationBlock" id="informationBlock">
+                <div class="backbutton" id="back" onclick="back()">
+                    <img src="images/back.png" alt="back" id="backIcon" />
+                    <p id="backButtonTextBack"> Back </p>
+                </div>
+                <div class="navi-icon">
+                    <img src="images/Icon-1.png" alt="navi-icon" id="navi-icon" />
+                </div>
+                <div class="infoBlockMain" onclick="nextAfterInformationBlock()">
+                    <div class="textInformation">
+                        <div>
+                            <h1>Please reply to a few questions, so we can demonstrate our technology possibilities</h1>
+                        </div>
+                        <div class="help2">
+                            <p><small>Please tap to continue</small></p>
+                        </div>
+                    </div>
+                    <div class="Logo-small" id="logo-small-infoblock">
+                        <img src="images/LogoWaynet-White-Small.png" alt="Waynet" />
+                    </div> 
+                </div>
+            </div>
+
+            <div class="helloBlock" id="helloBlock">
+                <div class="backbutton" id="back" onclick="backToInformationBlock()">
+                    <img src="images/back.png" alt="back" id="backIcon" />
+                    <p id="backButtonTextBack"> Back </p>
+                </div>
+                <div class="navi-icon">
+                    <img src="images/Icon-2.png" alt="navi-icon" id="navi-icon" />
+                </div>
+                
+                <div>
+                    <h3> Please enter your name </h3>
+                </div>
+                <div class="gender">
+
+                    <input type="radio" id="male" name="gender_filter" value="1" onclick="changeToMan()" />
+                    <p class="MrMS">Mr.</p>
+
+                    <input type="radio" id="female" name="gender_filter" value="0" onclick="changeToWoMan()" />
+                    <p class="MrMS">Ms.</p>
+                </div>
+                <div class="nameInput">
+                    <input type="text" class="inputText" name="enterName" id="firstName" value="First name" onclick="cleartextBox('firstName')"/>
+                    <input type="text" class="inputText" name="enterSecondName" id="secondName" value="Last name" onclick="cleartextBox('secondName')" />
+                </div>
+                
+                <div class="camera" id="camera" onclick="cameraOpen()">
+                    <img id="pictureMan" class="maleIcon" src="images/maleIcon.jpg" width="150" height="175">
+                    <img id="pictureWoman" class="femaleIcon" src="images/femaleIcon.jpg" width="150" height="175">
+                    <img id="picturePhoto" class="photoIcon" src="" width="150" height="175">
+                </div>
+                <div class="WelcomeText">
+                    <button class="selectWelcomeButton" id="selectWelcomeButton" onclick="selectWelcome()">You can choose your greeting</button>
+                    <select class="selectWelcomeText" id="selectWelcomeText">
+                    </select>
+                </div>
+                <div class="confirm">
+                    <input type="button" value="Next" class="confirmButton" onclick="confirm()" />
+                </div>
+                <div class="Logo-small" id="logo-small-hello">
+                    <img src="images/LogoWaynet-White-Small.png" alt="Waynet" />
+                </div> 
+            </div>
+
+            <div id="whatToSelect" class="whatToSelect">
+                <div class="backbutton" id="back" onclick="backToHelloBlock()">
+                    <img src="images/back.png" alt="back" id="backIcon"/>
+                    <p id="backButtonTextBack"> Back </p>
+                </div>
+                <div class="navi-icon">
+                    <img src="images/Icon-3.png" alt="navi-icon" id="navi-icon" />
+                </div>
+                <div class="mainPlaceBlock">
+                    <button value="Infostand" id="WiFi" class="place" onclick="placeSelected('Infostand')"><img class="buttonIcon" src="images/Icon-Info.png" />Infostand</button>
+                    <button value="Cafe" id="Cafe" class="place" onclick="placeSelected('Cafe')"><img class="buttonIcon" src="images/Icon-Cafe.png" />Cafe</button>
+                    <button value="Wi-Fi zone" id="WiFi" class="place" onclick="placeSelected('Wi-Fi zone')"><img class="buttonIcon" src="images/Icon-WiFi.png"/>Wi-Fi zone</button>
+                    <button value="Toilets" id="Toilets" class="place" onclick="placeSelected('Toilets')"><img class="buttonIcon" src="images/Icon-Toilet.png" />Toilets</button>
+                    <button value="Exit" id="Exit" class="place" onclick="placeSelected('Exit')"><img class="buttonIcon" src="images/Icon-Stairs.png" />Exit</button>
+                    <button value="ISE events" id="ISEevents" class="place" onclick="placeSelected('ISE events')"><img class="buttonIcon" src="images/Icon-Info.png" />ISE events</button>
+                </div>
+                <div class="Logo-small" id="logo-small-select">
+                    <img src="images/LogoWaynet-White-Small.png" alt="Waynet" />
+                </div> 
+            </div>
+
+            <div id="attention" class="attention">
+                <div id="back" onclick="back()">
+                    <img src="images/back.png" alt="back" id="backIcon"  />
+                    <p id="backButtonTextBack">Back to start page</p>
+                </div>
+                <h1 class="success">Yes!</h1>
+                <h1 class="flipText">Now You can flip the phone on the right side of the MediaBoard to see the info you need</h1>
+                <div class="iconToFlip">
+                    <img src="images/Icon-4.png" alt="Please flip" />
+                </div>
+                <div id="logo-small-attention" class="Logo-small">
+                    <img src="images/LogoWaynet-White-Small.png" alt="Waynet" />
+                </div> 
+            </div>
+        </div>
+
+        <div id="properties">
+            <div class="backbutton" id="back" onclick="closeConfiguration()">
+                <img src="images/back.png" alt="back" id="backIcon" />
+                <p id="backButtonTextBack"> Back </p>
+            </div>
+            <div class="properties">
+                <input type="text" id="SignalLevel" value="-45" />
+                <br />
+                | RSSi Signal Level
+                <br />
+                <input type="text" id="IPadress" value="192.168.4.3" />
+                <br />
+                | Server IP adress
+                <br />
+                <input type="text" id="ipPort" value="8080" />
+                <br />
+                | Server Port 
+                <br />
+                <input type="text" id="NFC" value="DDF778E300000000" />
+                <br />
+                | NFC ID
+                <br />
+                <input type="text" id="NFC1" value="04A699DAC6488000" />
+                <br />
+                | NFC ID (second)
+            </div>
+            <div>
+                <button onclick="getCofiguration()">OK</button>
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </body>
+</html>

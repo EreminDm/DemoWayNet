@@ -1,0 +1,333 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    background: linear-gradient(to bottom left, #282561, #21A4DD);
+    height: 624px;
+}
+
+#properties {
+    display: none;
+}
+#propertiesButton {
+    margin-left: 87%;
+}
+#propertiesIMG {
+    width: 45px;
+}
+
+#backIcon {
+  height: 30px;
+  vertical-align: baseline;
+}
+
+p {
+  display: inline-block;
+  vertical-align: super;
+}
+p, h1, h2, h3, h4 {
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header {
+    height: 24px;
+}
+.footer {
+    position: fixed;
+    flex: 0 0 auto;
+    height: 60px;
+}
+.backbutton {
+     height: 30px;
+     display: inline-block;
+}
+.Logo-small {
+    margin-left: 12%;
+}
+.navi-icon {
+        display: inline-block;
+}
+#navi-icon {
+        width: 45px;
+    margin-left: 190px;
+    vertical-align: sub;
+}
+h3 {
+    margin: 5% 0% 3% 5%;
+}
+#backButtonTextBack {
+        font-size: 28px;
+        margin: 0px;
+}
+
+@media screen and (max-width: 399px) {
+    .startBlock {
+        height: 540px;
+    }
+        .bigLogo {
+            height: 50%;
+        }
+        .bigLogoPng {
+            height: 100%;
+            margin-left: 5%;
+        }
+        .info {
+            height: 45%;
+        }
+        .help1 {
+                height: 5%;
+                margin: 7% 0 0 30%;
+        }
+        .help2 {
+                height: 5%;
+                margin: 60% 0 0 30%
+        }
+        .textInformation {
+                padding-top: 35%;
+        }
+        .infoText {
+            padding-top: 25%;
+        }
+
+
+    .informationBlock {
+        display: none;
+        height: 540px;
+    }
+        .infoBlockMain {
+            height: 100%;
+        }
+        #logo-small-infoblock {
+            margin-top: 5%;
+        }
+
+    
+    .helloBlock {
+        display: none;
+        height: 540px;
+    }
+        .MrMS {
+            margin: 0px;
+            padding: 0px;
+        }
+        .femaleIcon {
+            display:none;
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-top-color: rgba(33, 164, 221, 0.4);
+                border-bottom-color: rgba(40, 37, 97, 0.4);
+                border-left-color: rgba(40, 37, 97, 0.4);
+                border-right-color: rgba(33, 164, 221, 0.4);
+        }
+        .maleIcon {
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-top-color: rgba(33, 164, 221, 0.4);
+                border-bottom-color: rgba(40, 37, 97, 0.4);
+                border-left-color: rgba(40, 37, 97, 0.4);
+                border-right-color: rgba(33, 164, 221, 0.4);
+        }
+        #picturePhoto {
+                display: none;
+                border-radius: 50%;
+                border-width: 2px;
+                border-style: solid;
+                border-top-color: rgba(33, 164, 221, 0.4);
+                border-bottom-color: rgba(40, 37, 97, 0.4);
+                border-left-color: rgba(40, 37, 97, 0.4);
+                border-right-color: rgba(33, 164, 221, 0.4);
+        }
+        .camera {
+                width: 150px;
+                margin: 10% 0px 0px 26%;
+        }
+        .inputText{
+            border-style: none;
+            background: transparent;
+            border-bottom: 2px solid white;
+            width: 45%;
+            margin: 1%;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #logo-small-hello {
+            margin-top: 13%;
+        }
+
+        .confirmButton {
+                width: 100%;
+                height: 50px;
+                margin-top: 11%;
+                border-radius: 25px;
+                border: none;
+                background-color: white;
+                color: #21A4DD;
+                font-size: 30px;
+                font-weight: 600;
+                font-variant: small-caps;
+        }
+        #male {
+                width: 18px;
+                height: 18px;
+                margin: 5% 0% 4% 9%;
+        }
+        #female {
+                width: 18px;
+                height: 18px;
+                margin-left: 30%;
+            }
+        .selectWelcomeText{
+            height: 30px;
+            width: 100%;
+            text-align: center;
+            border-style: none;
+            background: transparent;
+            border-bottom: 2px solid white;
+            font-size: 17px;
+            color: white;
+            display: none;
+        }
+        .selectWelcomeButton {
+            width: 100%;
+                height: 30px;
+                margin-top: 2%;
+                border-radius: 25px;
+                border: none;
+                background-color: white;
+                color: #21A4DD;
+                font-size: 20px;
+                font-weight: 600;
+        }
+            
+
+
+    .whatToSelect {
+        display: none;
+        height: 540px;
+    }
+
+        .place {
+                width: 150px;
+                height: 70px;
+                margin: 10% 0 0 3%;
+                text-align: left;
+                font-size: 17px;
+                    color: white;
+    background: linear-gradient(to bottom left, #21A4DD, #F7F8F8);
+    border-bottom-color: #00B5FF;
+    border-right-color: #00B5FF;
+    border-top-color: rgba(0, 181, 255, 1);
+    border-left-color: rgba(0, 181, 255, 0.7);
+    font-weight: 600;
+        }
+        .buttonIcon {
+                width: 45px;
+                vertical-align: middle;
+                padding-right: 5%;
+        }
+
+        .mainPlaceBlock {
+            margin-top: 5%;
+        }
+        
+        #logo-small-select {
+                margin-top: 43%;
+        }
+
+
+
+    .attention {
+        display: none;
+        height: 540px;
+    }
+        .success {
+            font-size: 46px;
+                margin-top: 7%;
+        }
+        .flipText {
+                font-size: 32px;
+                text-align: left;
+                    margin-top: 7%;
+        }
+        #backButtonTextBack {
+             font-size: 20px;
+             margin: 0px;
+        }   
+        #logo-small-attention {
+            margin-top: 9%;
+        }
+        .iconToFlip {
+                margin: 6% 0 0 20%;
+        }
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    #whatToSelect {
+  display: none;
+}
+#attention {
+  display: none;
+}
+#backIcon {
+  height: 30px;
+}
+p {
+  display: inline-block;
+  vertical-align: super;
+}
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;
+        margin:-90px 0px 0px -198px;
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}

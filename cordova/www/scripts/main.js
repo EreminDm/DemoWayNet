@@ -4,10 +4,10 @@ var gender;
 var secondName;
 var firstName;
 var helloMesage;
-//var deviceId = '4DF978E300000000'; //telefon 2
-//var deviceId1 = '040A96DAC6488000'; // telefon 2
-var deviceId = 'DDF778E300000000';
-var deviceId1 = '04A699DAC6488000';
+//var deviceId = '4DF978E3'; //telefon 2
+//var deviceId1 = '040A96DA'; // telefon 2
+var deviceId = 'DDF778E3';
+var deviceId1 = '04A699DA';
 var ipAdress = "192.168.4.3";
 var signalLimit = -47;
 var ipPort = "8080";
